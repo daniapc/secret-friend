@@ -4,8 +4,6 @@ from unidecode import unidecode
 
 from cesar import *
 
-MODE = 'amigo'
-
 TEXTS = [
 'Que o Natal encha seu coração de alegria e paz',
 'Boas festas Muito amor e união para você e sua família.',
@@ -98,7 +96,7 @@ for target in sorteio:
     out += str(deslocamento) + '\n'
     out += cripto
 
-    f = open(os.getcwd() + '/out_' + MODE + '/' + name + '.txt', "a")
+    f = open(os.getcwd() + '/out/' + name + '.txt', "a")
     f.write(out)
     f.close()
     # print(cripto)
