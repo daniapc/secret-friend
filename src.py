@@ -28,6 +28,7 @@ SERGI = 'Sergio'
 GIOVA = 'Giovana'
 LETIC = 'Leticia'
 RAISS = 'Raissa'
+SAMUE = 'Samuel'
 
 names = [
     MAIRA,
@@ -40,7 +41,8 @@ names = [
     SERGI,
     GIOVA,
     LETIC,
-    RAISS
+    RAISS,
+    SAMUE
 ]
 
 names_dic = {}
