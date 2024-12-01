@@ -4,17 +4,19 @@ from unidecode import unidecode
 
 from cesar import *
 
+MODE = '[INIMIGO SECRETO]'
+
 TEXTS = [
-'Que o Natal encha seu coração de alegria e paz',
-'Boas festas Muito amor e união para você e sua família.',
-'Feliz Natal Que a magia renove sua esperança.',
-'Paz amor e luz Que seu Natal seja especial.',
-'Um Natal cheio de sorrisos e sonhos realizados',
-'Que o espírito natalino esteja presente no seu lar.',
-'Feliz Natal Que sua vida brilhe como as estrelas.',
-'Amor e gratidão o verdadeiro espírito do Natal',
-'Que este Natal traga saúde amor e felicidade',
-'Um Natal abençoado com momentos inesquecíveis',
+'O Natal chegou e com ele as brigas familiares.',
+'Mais um Natal mais dívidas no cartão Feliz?',
+'Clima natalino paz na ceia guerra nos grupos.',
+'É Natal Hora de ouvir as mesmas piadas ruins.',
+'Natal falsos abraços e promessas que não duram.',
+'Presentes caros afetos baratos Feliz Natal!',
+'Ceia farta mas o coração segue vazio.',
+'Natal luzes brilhantes contas ainda mais altas.',
+'Alegria de Natal Só até abrir a fatura.',
+'Família reunida Que comece o show de indiretas!',
 ]
 
 MAIRA = 'Maira'
@@ -75,7 +77,8 @@ for target in sorteio:
 
     cripto = cifra_cesar(inserted, -deslocamento).lower()
 
-    out = 'Deslocamento: '
+    out = MODE + '\n'
+    out += 'Deslocamento: '
     out += str(deslocamento) + '\n'
     out += cripto
 
