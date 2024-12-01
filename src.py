@@ -4,45 +4,32 @@ from unidecode import unidecode
 
 from cesar import *
 
+MODE = '[AMIGO SECRETO]'
+
+# PUT MESSAGES HERE, THE MORE THE BETTER
 TEXTS = [
 'Que o Natal encha seu coração de alegria e paz',
 'Boas festas Muito amor e união para você e sua família.',
-'Feliz Natal Que a magia renove sua esperança.',
-'Paz amor e luz Que seu Natal seja especial.',
-'Um Natal cheio de sorrisos e sonhos realizados',
-'Que o espírito natalino esteja presente no seu lar.',
-'Feliz Natal Que sua vida brilhe como as estrelas.',
-'Amor e gratidão o verdadeiro espírito do Natal',
-'Que este Natal traga saúde amor e felicidade',
-'Um Natal abençoado com momentos inesquecíveis',
 ]
 
+# PUT THE NAMES HERE
 MAIRA = 'Maira'
 DANIE = 'Daniel'
-GABRI = 'Gabriel'
-FEDIA = 'Felipe Dias'
-FELEM = 'Felipe Leme'
 MAGAL = 'Magali'
 ANAPA = 'Ana Paula'
 SERGI = 'Sergio'
-GIOVA = 'Giovana'
-LETIC = 'Leticia'
-RAISS = 'Raissa'
 
+# THE SAME NAMES MUST BE IN THE ARRAY BELOW
 names = [
     MAIRA,
     DANIE,
-    GABRI,
-    FEDIA,
-    FELEM,
     MAGAL,
     ANAPA,
     SERGI,
-    GIOVA,
-    LETIC,
-    RAISS
 ]
 
+
+# EXCLUDING LIST
 names_dic = {}
 
 for name in names:
@@ -51,18 +38,12 @@ for name in names:
     names_dic[name]['exc'] = []
     names_dic[name]['exc'].append(name)
 
-'''
-Lista exclusão
-'''
-
 names_dic[MAIRA]['exc'].append(SERGI)
 names_dic[SERGI]['exc'].append(MAIRA)
 
 names_dic[MAGAL]['exc'].append(ANAPA)
 
-'''
-Embaralha
-'''
+#SHUFLE
 success = False
 sorteio = []
 
@@ -80,6 +61,7 @@ while not(success):
             success = False
             break
 
+# CRIPTO AND SAVE IT
 for target in sorteio:
     text = TEXTS[random.randint(0, len(TEXTS)-1)]
     text_len = len(text)
@@ -92,11 +74,11 @@ for target in sorteio:
 
     cripto = cifra_cesar(inserted, -deslocamento).lower()
 
-    out = 'Deslocamento: '
+    out = MODE + '\n'
+    out += 'Deslocamento: '
     out += str(deslocamento) + '\n'
     out += cripto
 
     f = open(os.getcwd() + '/out/' + name + '.txt', "a")
     f.write(out)
     f.close()
-    # print(cripto)
