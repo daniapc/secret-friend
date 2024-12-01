@@ -19,13 +19,8 @@ TEXTS = [
 
 MAIRA = 'Maira'
 DANIE = 'Daniel'
-GABRI = 'Gabriel'
-FEDIA = 'Felipe Dias'
 FELEM = 'Felipe Leme'
-MAGAL = 'Magali'
 ANAPA = 'Ana Paula'
-SERGI = 'Sergio'
-GIOVA = 'Giovana'
 LETIC = 'Leticia'
 RAISS = 'Raissa'
 SAMUE = 'Samuel'
@@ -33,13 +28,8 @@ SAMUE = 'Samuel'
 names = [
     MAIRA,
     DANIE,
-    GABRI,
-    FEDIA,
     FELEM,
-    MAGAL,
     ANAPA,
-    SERGI,
-    GIOVA,
     LETIC,
     RAISS,
     SAMUE
@@ -52,15 +42,6 @@ for name in names:
 
     names_dic[name]['exc'] = []
     names_dic[name]['exc'].append(name)
-
-'''
-Lista exclusão
-'''
-
-names_dic[MAIRA]['exc'].append(SERGI)
-names_dic[SERGI]['exc'].append(MAIRA)
-
-names_dic[MAGAL]['exc'].append(ANAPA)
 
 '''
 Embaralha
