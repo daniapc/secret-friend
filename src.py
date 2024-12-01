@@ -4,6 +4,8 @@ from unidecode import unidecode
 
 from cesar import *
 
+MODE = '[AMIGO SECRETO]'
+
 TEXTS = [
 'Que o Natal encha seu coração de alegria e paz',
 'Boas festas Muito amor e união para você e sua família.',
@@ -94,7 +96,8 @@ for target in sorteio:
 
     cripto = cifra_cesar(inserted, -deslocamento).lower()
 
-    out = 'Deslocamento: '
+    out = MODE + '\n'
+    out += 'Deslocamento: '
     out += str(deslocamento) + '\n'
     out += cripto
 
