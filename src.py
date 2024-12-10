@@ -69,7 +69,7 @@ for target in sorteio:
     name = names[sorteio.index(target)]
     rand_pos = random.randint(1, text_len-1)
 
-    inserted = unidecode(text[0:rand_pos] + target + text[rand_pos:text_len])
+    inserted = unidecode(text[0:rand_pos] + ' ' + target + ' ' + text[rand_pos:text_len])
     deslocamento = random.randint(2,5)
 
     cripto = cifra_cesar(inserted, -deslocamento).lower()
@@ -78,6 +78,7 @@ for target in sorteio:
     out += 'Deslocamento: '
     out += str(deslocamento) + '\n'
     out += cripto
+    # out += '\n'+inserted
 
     f = open(os.getcwd() + '/out/' + name + '.txt', "a")
     f.write(out)
