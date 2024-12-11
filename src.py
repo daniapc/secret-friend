@@ -10,22 +10,38 @@ MODE = '[AMIGO SECRETO]'
 TEXTS = [
 'Que o Natal encha seu coração de alegria e paz',
 'Boas festas Muito amor e união para você e sua família.',
+'Feliz Natal Que a magia renove sua esperança.',
+'Paz amor e luz Que seu Natal seja especial.',
+'Um Natal cheio de sorrisos e sonhos realizados',
+'Que o espírito natalino esteja presente no seu lar.',
+'Feliz Natal Que sua vida brilhe como as estrelas.',
+'Amor e gratidão o verdadeiro espírito do Natal',
+'Que este Natal traga saúde amor e felicidade',
+'Um Natal abençoado com momentos inesquecíveis',
 ]
 
 # PUT THE NAMES HERE
-MAIRA = 'Maira'
 DANIE = 'Daniel'
-MAGAL = 'Magali'
-ANAPA = 'Ana Paula'
-SERGI = 'Sergio'
+VIVIA = 'Viviane'
+GIOVA = 'Giovana'
+BERNA = 'Bernardo'
+LUCAS = 'Lucas'
+DEBOR = 'Debora'
+THAIS = 'Thais'
+GUSTA = 'Gustavo'
+DAVID = 'David'
 
 # THE SAME NAMES MUST BE IN THE ARRAY BELOW
 names = [
-    MAIRA,
-    DANIE,
-    MAGAL,
-    ANAPA,
-    SERGI,
+DANIE,
+VIVIA,
+GIOVA,
+BERNA,
+LUCAS,
+DEBOR,
+THAIS,
+GUSTA,
+DAVID
 ]
 
 
@@ -38,10 +54,8 @@ for name in names:
     names_dic[name]['exc'] = []
     names_dic[name]['exc'].append(name)
 
-names_dic[MAIRA]['exc'].append(SERGI)
-names_dic[SERGI]['exc'].append(MAIRA)
-
-names_dic[MAGAL]['exc'].append(ANAPA)
+names_dic[GIOVA]['exc'].append(BERNA)
+names_dic[BERNA]['exc'].append(GIOVA)
 
 #SHUFLE
 success = False
