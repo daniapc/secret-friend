@@ -1,5 +1,6 @@
 import os
 import random
+import re
 from unidecode import unidecode
 
 from cesar import *
@@ -73,6 +74,7 @@ for target in sorteio:
     deslocamento = random.randint(2,5)
 
     cripto = cifra_cesar(inserted, -deslocamento).lower()
+    cripto = re.sub(' +', ' ', cripto)
 
     out = MODE + '\n'
     out += 'Deslocamento: '
